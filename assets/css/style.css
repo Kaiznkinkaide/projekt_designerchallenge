@@ -1,0 +1,520 @@
+/* ----global_styling---- */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("../fonts/Roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../fonts/Roboto/Roboto-Bold.ttf");
+}
+
+
+:root {
+    --background-color-input: #F5F5F5;
+    --font-color-black: #000;
+    --color-pink: #FF3571;
+    --color-grey: #DDD;
+    --font-size-h1: 3.375rem;
+    --font-size-logo1-ph: 1.5rem;
+    --font-size-logo2: 0.75rem;
+    --font-size-p1-h4: 1.125rem;
+    --font-size-a-p2: 0.875rem;
+    --font-size-h2: 2.375rem;
+    --font-size-h3: 1.75rem;
+    --font-size-submit: 1.188rem;
+    --font-size-zahl: 3.25rem;
+    --color-dark-grey: #757575;
+    --color-white: #FFF;
+
+}
+
+h1 {
+    font-family: 'Roboto-Bold';
+    color: var(--font-color-black);
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-family: 'Roboto-Bold';
+    color: var(--font-color-black);
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-family: 'Roboto-Bold';
+    color: var(--font-color-black);
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-family: 'Roboto-Bold';
+    color: var(--font-color-black);
+    font-size: var(--font-size-p1-h4);
+}
+
+.logo1 {
+    font-family: 'Roboto-Bold';
+    color: var(--font-color-black);
+    font-size: var(--font-size-logo1-ph);
+}
+
+.logo2 {
+    font-family: 'Roboto-Light';
+    color: var(--font-color-black);
+    font-size: var(--font-size-logo2);
+}
+
+p {
+    font-family: 'Roboto-Light';
+    color: var(--font-color-black);
+    font-size: var(--font-size-a-p2);
+    line-height: 2;
+}
+
+.headline p,
+.idea p {
+    font-family: 'Roboto-Light';
+    color: var(--font-color-black);
+    font-size: var(--font-size-p1-h4);
+}
+
+.headline a {
+    font-family: 'Roboto-Bold';
+    font-size: var(--font-size-p1-h4);
+    color: #FF3571;
+    text-decoration: none;
+}
+
+.zahl {
+    font-family: 'Roboto-Bold';
+    color: var(--color-grey);
+    font-size: var(--font-size-zahl);
+}
+
+input::placeholder {
+    font-family: Arial;
+    color: var(--color-dark-greygrey);
+    font-size: var(--font-size-logo1-ph);
+}
+
+input[type="submit"] {
+    font-family: Arial;
+    color: var(--color-white);
+    font-size: var(--font-size-submit);
+}
+
+.schlusstext {
+    font-family: 'Roboto-Light';
+    color: var(--font-color-black);
+    font-size: var(--font-size-p1-h4);
+}
+
+
+
+/* ----header----- */
+
+.headerLogo img {
+    width: 3rem;
+    position: fixed;
+    margin: 3rem 1rem;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+
+}
+
+.headerRechts {
+    background-image: url("../img/ilustracion1.png");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60%;
+    height: 90%;
+    margin: 0 auto;
+}
+
+.headerRechts img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: float 2s 0.2s infinite forwards alternate;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.headerLinks {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.headerLinks img {
+    position: fixed;
+    margin: 1rem 0 0 1rem;
+}
+
+.headerTitel {
+    margin: 0.5rem 0 0 5rem;
+
+}
+
+.headline {
+    margin-left: 7.5vw;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: 5vh;
+}
+
+/* ---Main---- */
+
+.bilder {
+    width: 100%;
+    height: 100vh;
+}
+
+.bilder img {
+    width: 100%;
+    height: 100vh;
+}
+
+.idea {
+    margin: 15vh 0 15vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+    gap: 5%;
+}
+
+.idea p {
+    width: 50%;
+    line-height: 200%;
+}
+
+.idea h2 {
+    width: 20%;
+}
+
+
+.challenge {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.challenge h2 {
+    width: 50%;
+    margin-left: 15%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "ask think"
+        "design share";
+    margin: 0 15%;
+}
+
+.start h4::before {
+    content: url("../img/title01.svg");
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    left: -10px;
+    top: 4px;
+}
+
+.think h4::before {
+    content: url("../img/title02.svg");
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    left: -10px;
+    top: 4px;
+}
+
+.design h4::before {
+    content: url("../img/title03.svg");
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    left: -10px;
+    top: 4px;
+}
+
+.share h4::before {
+    content: url("../img/title04.svg");
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    left: -10px;
+    top: 4px;
+}
+
+.grid h4 {
+    margin-left: -1.5vw;
+}
+
+
+
+
+
+.start {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    grid-area: ask;
+    height: 20vh;
+    width: 20vw;
+}
+
+.think {
+    grid-area: think;
+    height: 20vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.design {
+    grid-area: design;
+    height: 20vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.share {
+    grid-area: share;
+    height: 20vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+/* ----content before fehlt------ */
+
+.ready {
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    margin: 10% 0;
+}
+
+.ready p {
+    width: 30%;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    width: 100%;
+
+}
+
+.steps img {
+    width: 20vw;
+}
+
+.stepsleft,
+.stepsright {
+    display: flex;
+    margin: 0 15%;
+    gap: 10%;
+}
+
+.emoji img {
+    width: 5vh;
+}
+
+.links,
+.rechts {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+footer {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+footer p {
+    align-self: center;
+    width: 20vw;
+}
+
+input[type=email] {
+    align-self: center;
+    width: 30vw;
+    height: 10vh;
+    text-align: center;
+    background-color: white;
+    border-style: none;
+    box-shadow: 0 0 5px 10px #f5f5f5;
+}
+
+input[type=email]::placeholder {
+    color: #757575;
+    text-align: center;
+    font-family: "Arial";
+    font-size: 1.5rem;
+}
+
+input[type=submit] {
+    border-radius: 4px;
+    border-style: none;
+    background: #FF3571;
+    height: 7.5vh;
+    width: 20vw;
+    align-self: center;
+}
+
+.schlusstext {
+    width: 30vw;
+    margin-top: 20vh;
+    align-self: flex-start;
+    margin-left: 10vw;
+}
+
+@media only screen and (max-width: 992px) {
+    .headerRechts {
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        width: 70vw;
+    }
+
+    .bilder {
+        margin-bottom: 5%;
+    }
+
+    .idea {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+
+    .idea h2 {
+        margin: 15% 0 5% 0;
+    }
+
+    .idea p {
+        margin: 0 0 25%;
+        width: 80%;
+    }
+
+    .challenge h2 {
+        margin: 0 15% 5%;
+        align-self: center;
+        text-align: center;
+    }
+
+
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "ask"
+            "think"
+            "design"
+            "share";
+    }
+
+    .start,
+    .think,
+    .design,
+    .share {
+        margin: auto;
+        width: 80%;
+
+    }
+
+    .challenge h4 {
+        align-self: center;
+        text-align: center;
+    }
+
+    .challenge p {
+        align-self: center;
+        text-align: center;
+    }
+
+    .challenge {
+        height: 100vh;
+    }
+
+    .stepsleft,
+    .stepsright {
+        margin: 10%;
+    }
+
+    .steps {
+        gap: 5%;
+    }
+
+
+
+    footer p {
+        width: 50vw;
+    }
+
+
+}
